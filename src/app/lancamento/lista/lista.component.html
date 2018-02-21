@@ -1,0 +1,18 @@
+<table border="1">
+  <thead>
+    <tr>
+      <th>Descrição</th>
+      <th>Valor</th>
+      <th>Movimentação</th>
+      <th>Situação</th>
+    </tr>
+  </thead>
+
+  <tr *ngFor="let lanc of lancamentos">
+    <td>{{ lanc.descricao }}</td>
+    <td>{{ lanc.valor }}</td>
+    <td>{{ lanc.movimentacao }}</td>
+    <td>{{ lanc.situacao }}</td>
+  </tr>
+
+</table>

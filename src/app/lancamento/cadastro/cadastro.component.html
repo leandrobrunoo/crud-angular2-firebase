@@ -1,0 +1,30 @@
+<form #lanc="ngForm" (ngSubmit)="salvar(lanc)">
+
+  <label>Descrição</label>
+  <input type="text" name="descricao" [ngModel]="lancamento.descricao">
+
+  <label>Valor</label>
+  <input type="text" name="valor" [ngModel]="lancamento.valor">
+
+  <label>Vencimento</label>
+  <input type="date" name="dataVencimento" [ngModel]="lancamento.dataVencimento">
+
+  <label>Pagamento</label>
+  <input type="date" name="dataPagamento" [ngModel]="lancamento.dataPagamento">
+
+  <label>Movimentação</label>
+  <select name="movimentacao" [ngModel]="lancamento.movimentacao">
+    <option value="DESPESA">Despesa</option>
+    <option value="RECEITA">Receita</option>
+  </select>
+
+  <label>Situação</label>
+  <select name="situacao" [ngModel]="lancamento.situacao">
+    <option value="ABERTO">Aberto</option>
+    <option value="PAGO">Pago</option>
+    <option value="CANCELADO">Cancelado</option>
+  </select>
+
+  <button type="submit">Salvar</button>
+
+</form>
